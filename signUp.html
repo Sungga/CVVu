@@ -23,11 +23,11 @@
                 <div class="container-fb__list">
                     <h1>Đăng ký</h1>
                     <p>Tên đăng nhập</p>
-                    <input type="text" placeholder="Tên đăng nhập">
+                    <input type="text" class=".input-signup-username" placeholder="Tên đăng nhập">
                     <p>Số điện thoại</p>
                     <input type="text" placeholder="SĐT">
                     <p>Mật khẩu</p>
-                    <input type="password" placeholder="Mật khẩu">
+                    <input type="password" class=".input-signup-password" placeholder="Mật khẩu">
                     <p>Nhập lại mật khẩu</p>
                     <input type="password" placeholder="Nhập lại mật khẩu">
 
@@ -58,11 +58,42 @@
                     <p>Nhập captcha</p>
                     <input type="text" placeholder="Captcha">
 
-                    <a href="#0"><button class="btn">Đăng ký</button></a>
+                    <a href="#0"><button class="btn .signup__signInButton">Đăng ký</button></a>
                     <p><a href="https://sungga.github.io/CVVu/index.html?page=login">Quay lại đăng nhập</a></p>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
+<script>
+  // validation form register and register user local storage
+const inputUsernameRegister = document.querySelector(".input-signup-username");
+const inputPasswordRegister = document.querySelector(".input-signup-password");
+const btnRegister = document.querySelector(".signup__signInButton");
+
+// validation form register and register user local storage
+
+btnRegister.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    inputUsernameRegister.value === "" ||
+    inputPasswordRegister.value === ""
+  ) {
+    alert("vui lòng không để trống");
+  } else {
+    // array user
+    const user = {
+      username: inputUsernameRegister.value,
+      password: inputPasswordRegister.value,
+    };
+    let json = JSON.stringify(user);
+    localStorage.setItem(inputUsernameRegister.value, json);
+    alert("Đăng Ký Thành Công");
+    window.location.href = "index.html";
+  }
+});
+
+</script>
+    
 </html>
