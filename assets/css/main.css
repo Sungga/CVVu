@@ -103,7 +103,7 @@ p {
 
 /* BEGIN FORGOT PASSWORD */
 .main__forgot-password {
-    background-image: url('/assets/img/img-background.jpg');
+    background-image: url('https://sungga.github.io/CVVu/assets/img/img-background.jpg');
 }
 
 .container-fp {
@@ -499,7 +499,7 @@ p {
     width: 100%;
     padding-top: 50%;
     margin-top: var(--header-height);
-    background: url('/assets/img/bong.jpg') top center / cover no-repeat;
+    background: url('https://sungga.github.io/CVVu/assets/img/bong.jpg') top center / cover no-repeat;
     position: relative;
 }
 
